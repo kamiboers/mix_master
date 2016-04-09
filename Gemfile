@@ -37,6 +37,8 @@ group :development, :test do
   gem 'launchy'
   gem 'shoulda-matchers'
   gem 'byebug'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 
 end
