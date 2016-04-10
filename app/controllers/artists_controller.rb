@@ -13,6 +13,7 @@ class ArtistsController < ApplicationController
 		if @artist.save
 			redirect_to artist_path(@artist)
 		else
+			
 			render :new
 		end
 	end
