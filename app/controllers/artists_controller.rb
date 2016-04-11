@@ -11,9 +11,10 @@ class ArtistsController < ApplicationController
 	def create
 		@artist = Artist.new(artist_params)
 		if @artist.save
+			flash.notice = "The artist #{@artist.name} was saved!"
 			redirect_to artist_path(@artist)
 		else
-			
+			flash.notice = "All artists must have a name and an image path."
 			render :new
 		end
 	end

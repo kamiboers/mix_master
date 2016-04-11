@@ -1,0 +1,13 @@
+<%= form_for(@playlist) do |f| %>
+  <%= f.text_field :name %>
+
+  <% Song.all.each do |song| -%>
+    <div>
+        <% @playlist.songs.pluck(:title).include?(song.title) ? on_list = true : on_list = false %>
+      <%= check_box_tag :song_ids, song.id, on_list, :name => 'playlist[song_ids][]', id: "song-#{song.id}" %>
+      <%= song.title %>
+    </div>
+  <% end %>
+
+  <%= f.submit %>
+<% end %>

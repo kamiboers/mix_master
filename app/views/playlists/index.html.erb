@@ -1,0 +1,20 @@
+<h1>All Playlists</h1>
+
+
+<table>
+	<thead>
+		<tr>
+			<th>Playlist Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @playlists.each do |playlist| %>
+		<tr>
+			<td><%= link_to "#{playlist.name}", playlist_path(playlist.id) %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<br>
+
+<%= link_to "New Playlist", new_playlist_path %>

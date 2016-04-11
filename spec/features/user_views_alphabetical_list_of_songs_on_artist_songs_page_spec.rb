@@ -21,9 +21,9 @@ RSpec.feature "User views artist's songs" do
 		expect(page).to have_content song.title
 		expect(page).to have_content song2.title
 		expect(page).to have_content song3.title
-		page.first('div').text.should include('Buffalo Soldier')
+		page.first('div').text.should include('A Title')
 
-		click_on "Buffalo Soldier"
+		click_on "A Title"
 
 		assert_equal song_path(song), current_path
 	end

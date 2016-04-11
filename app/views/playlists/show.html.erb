@@ -1,0 +1,10 @@
+<h1><%= @playlist.name %></h1>
+<ul>
+  <% @playlist.songs.each do |song| %>
+    <li><%= link_to song.title, song %><%= " - #{song.artist.name}" %></li>
+  <% end %>
+</ul>
+<br>
+<%= link_to "Edit", edit_playlist_path(@playlist) %>
+<br>
+<%= link_to "Delete", playlist_path(@playlist), method: :delete, data: { confirm: 'Are you sure that you want to delete ' + @playlist.name + '?' } %>
