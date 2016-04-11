@@ -1,7 +1,12 @@
 <h1><%= @artist.name %></h1>
-<%= image_tag @artist.image_path %>
-<br><br>
-<%= link_to "Update Artist", edit_artist_path(@artist) %>
-<%= link_to 'Delete', @artist, method: :delete, data: { confirm: 'Are you sure that you want to delete ' + @artist.name + '?' } %><br>
-<%= link_to "Songs by #{@artist.name}", artist_songs_path(@artist) %>
-<%= link_to "New Song", new_artist_song_path(@artist) %>
+<div class="col-md-4">
+	<%= link_to "Songs by #{@artist.name}", artist_songs_path(@artist) %>
+	<br>
+	<%= image_tag @artist.image_path %>
+	<br>
+	<div class="btn-group btn-group-xs pull-right" role="group">
+		<div class ="btn btn-success button-link"><%= link_to "New Song", new_artist_song_path(@artist) %></div>
+		<div class="btn btn-info"><%= link_to "Update Artist", edit_artist_path(@artist) %></div>
+		<div class="btn btn-danger"><%= link_to 'Delete', @artist, method: :delete, data: { confirm: 'Are you sure that you want to delete ' + @artist.name + '?' } %></div>
+	</div>
+</div>

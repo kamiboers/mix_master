@@ -1,0 +1,79 @@
+a:link {
+	color: #d9d9d9;
+	font-weight: bold;
+}
+
+a:visited {
+	color: #d9d9d9;
+}
+
+a:hover {
+	text-decoration: none;
+	font-weight: bold;
+	color: #cce6ff;
+}
+
+html body {
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+    font-family: Helvetica;
+}
+
+.btn-info {
+	background-color: #004080;
+	border-color: #004080;
+}
+
+.btn-info:hover {
+	background-color: #004d99;
+	border-color: #004d99;
+}
+
+.btn-success {
+	background-color: #003300;
+	border-color: #003300;
+}
+
+.btn-success:hover {
+	background-color: #004d00;
+	border-color: #004d00;
+}
+
+.btn-danger {
+	background-color: #660000;
+	border-color: #660000;
+}
+
+.btn-danger:hover {
+	background-color: #800000;
+	border-color: #800000;
+}
+
+.artist-box {
+	width: 35%;
+	align-content: right;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, 
+.table-striped>tbody>tr:nth-child(odd)>th {
+   background-color: #151e1e;
+ }
+
+
+ .table-striped>tbody>tr:nth-child(even)>td, 
+.table-striped>tbody>tr:nth-child(even)>th {
+   background-color: #1f2d2d;
+ }
+
+.table {
+	border-bottom: 1px solid red;
+}
+
+
+ .songs-box {
+ 	width: 65%;
+ }
+
+.form_field {
+	color: black;
+}
