@@ -13,8 +13,8 @@ RSpec.feature "User can edit existing artist" do
 
     new_name = "Falafel"
 
-    fill_in "artist_name", with: new_name
-    click_on "Update Artist"
+    fill_in "artist[name]", with: new_name
+    click_on "Submit Artist"
 
     assert_equal current_path, artist_path(artist)
     expect(page).to have_no_content "Spoon"

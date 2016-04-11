@@ -10,7 +10,7 @@ RSpec.feature "User submits a new song" do
     song_title = "Hole in the Ocean Floor"
 
     fill_in "song_title", with: song_title
-    click_on "Create Song"
+    click_on "Submit Song"
 
     expect(page).to have_content song_title
     expect(page).to have_link artist.name, href: artist_path(artist)

@@ -7,7 +7,7 @@ RSpec.feature "User submits an invalid song" do
     visit artist_path(artist)
 
     click_on "New Song"
-    click_on "Create Song"
+    click_on "Submit Song"
 
     expect(page).to have_content "Title cannot be blank"
 

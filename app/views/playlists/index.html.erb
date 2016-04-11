@@ -4,15 +4,17 @@
 <table>
 	<thead>
 		<tr>
-			<th>Playlist Name</th>
+			<th class="t-head">Playlist Name</th>
 		</tr>
 	</thead>
 	<tbody>
+	<ul>
 		<% @playlists.each do |playlist| %>
 		<tr>
-			<td><%= link_to "#{playlist.name}", playlist_path(playlist.id) %></td>
+			<td><li><%= link_to "#{playlist.name}", playlist_path(playlist.id) %></li></td>
 		</tr>
 		<% end %>
+		</ul>
 	</tbody>
 </table>
 <br>

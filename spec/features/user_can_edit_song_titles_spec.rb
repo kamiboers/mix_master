@@ -12,7 +12,7 @@ RSpec.feature "User edits a song title" do
 
    new_title = "Red, Red Wine"
    fill_in "song_title", with: new_title
-   click_on "Update Song"
+   click_on "Submit Song"
 
     expect(page).to have_content new_title
     expect(page).to have_link "#{artist.name}"

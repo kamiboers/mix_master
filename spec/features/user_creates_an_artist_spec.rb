@@ -9,7 +9,7 @@ RSpec.feature "User submits a new artist" do
     click_on "New Artist"
     fill_in "artist_name", with: artist_name
     fill_in "artist_image_path", with: artist_image_path
-    click_on "Create Artist"
+    click_on "Submit Artist"
 
     expect(page).to have_content artist_name
     expect(page).to have_css("img[src=\"#{artist_image_path}\"]")
@@ -23,9 +23,9 @@ RSpec.feature "User submits a new artist" do
       
       click_on "New Artist"
       fill_in "artist_image_path", with: artist_image_path
-      click_on "Create Artist"
+      click_on "Submit Artist"
 
-      expect(page).to have_content "Name can't be blank"
+      expect(page).to have_content "All artists must have a name and an image path."
     end
   end
 end

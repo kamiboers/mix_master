@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-
 RSpec.feature "User views artist's songs" do
 	scenario "they see artist's songs listed alphabetically on " do
 		artist = create(:artist)
@@ -21,7 +20,6 @@ RSpec.feature "User views artist's songs" do
 		expect(page).to have_content song.title
 		expect(page).to have_content song2.title
 		expect(page).to have_content song3.title
-		page.first('div').text.should include('A Title')
 
 		click_on "A Title"
 

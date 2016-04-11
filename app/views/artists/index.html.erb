@@ -3,15 +3,17 @@
 <table>
 	<thead>
 		<tr>
-			<th>Artist Name</th>
+			<th class="t-head">Artist Name</th>
 		</tr>
 	</thead>
 	<tbody>
+	<ul>
 		<% @artists.each do |artist| %>
 		<tr>
-			<td><%= link_to "#{artist.name}", artist_path(artist.id) %></td>
+			<td><li><%= link_to "#{artist.name}", artist_path(artist.id) %></li></td>
 		</tr>
 		<% end %>
+		</ul>
 	</tbody>
 </table>
 <br>

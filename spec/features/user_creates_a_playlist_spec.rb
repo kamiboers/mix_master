@@ -11,16 +11,10 @@ RSpec.feature "User creates a playlist" do
     fill_in "playlist_name", with: playlist_name 
     check("song-#{song_one.id}")
     check("song-#{song_three.id}")
-    click_on "Create Playlist"
+    click_on "Submit Playlist"
 
     expect(page).to have_content playlist_name
-
-    within("li:first") do
-      expect(page).to have_link song_one.title, href: song_path(song_one)
-    end
-
-    within("li:last") do
-      expect(page).to have_link song_three.title, href: song_path(song_three)
-    end
+    expect(page).to have_link song_one.title, href: song_path(song_one)
+    expect(page).to have_link song_three.title, href: song_path(song_three)
   end
 end

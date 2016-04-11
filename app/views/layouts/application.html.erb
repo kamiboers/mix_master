@@ -9,9 +9,17 @@
 	<%= csrf_meta_tags %>
 </head>
 <body>
+<div class="navbar navbar-inverse">
+ <a class="navbar-brand mixmaster" href="/">MixMaster</a>
+	<ul class="navs pull-right">
+	<li class="btn butt-content"><%= link_to "Playlists", playlists_path %></li>
+	<li class="btn butt-content"><%= link_to "Artists", artists_path %></li>
+	</ul>
+</div>
+
 	<p class="flash notice-styling"><%= flash.notice %></p>
 	<div class="container">
-	<%= yield %>
+		<%= yield %>
 	</div>
 
 </body>
